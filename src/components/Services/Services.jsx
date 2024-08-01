@@ -1,98 +1,86 @@
 import React, { useContext } from "react";
-import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
-import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-
-import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
+import "./Services.css";
+import Card from "../Card/Card";
+import Glasses from "../../img/glasses.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import CV_Aziz from './AzizRezgui.pdf';
 
-const Intro = () => {
-  // Transition
-  const transition = { duration: 2, type: "spring" };
 
+const Services = () => {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
+  // transition
+  const transition = {
+    duration: 1,
+    type: "spring",
+  };
+
   return (
-    <div className="Intro" id="Intro">
-      {/* left name side */}
-      <div className="i-left">
-        <div className="i-name">
-          {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Mohamed Aziz Rezgui</span>
-          <span style={{color: "#fff !important",lineHeight:'40px'}}>
-          Au cours de mon expérience en tant que développeur web, j'ai travaillé avec plusieurs entreprises comme Connectors Technologies, GoMedia et OpenLink, IT-Pro Agency, 24-7 Digital Design et Jobid. Chez Connectors Technologies et It-Pro Agency, j'ai aidé à créer un nouveau site web en utilisant des outils modernes comme Laravel ,wordpress,PHP,React. Ensuite, chez GoMedia, j'ai développé des applications web et ajouté des fonctionnalités de commerce en ligne. Enfin, chez IT-Pro Agency, j'ai pris en charge plusieurs projets de A à Z, en veillant à ce que tout fonctionne bien et soit sécurisé. Ces expériences m'ont permis de renforcer mes compétences techniques et d'apprendre à mieux travailler en équipe,j'ai aussi le plaisir de vous parler de moi et de mon rôle en tant que formateur en développement web dans un centre de formation  renommé Its International Trainig Solution
-          (ITS) et Cabinet d'etude de Formation (CEF), je suis co-fondateur d'une start-up en HealthTEch nommée Health me en cours d'établissement, j'enseigne les bases et les avancées de langages tels que le HTML, le CSS, le JavaScript, ainsi que divers frameworks modernes comme Laravel wordpress. De plus, je forme des étudiants à l'utilisation de WordPress, une plateforme essentielle pour la création et la gestion de sites web.
-          </span>
-        </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Focus</button>
-        </Link>
-        {/* social icons */}
-        {/* <div className="i-icons">
-         
-        <a  target="_blank" href="https://www.linkedin.com/in/mohamed-aziz-rezgui-b5a8a5227/" rel="noreferrer">  <img src={LinkedIn} alt="" /></a>
-          <img src={Instagram} alt="" />
-        </div> */}
+    <div className="services" id="services">
+      {/* left side */}
+      <div className="awesome">
+        {/* dark mode */}
+        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
+        <span>services</span>
+        <spane >
+        Développement d'applications Web personnalisées : création d'applications Web à partir de zéro à l'aide de frameworks PHP
+        comme Laravel, Wordpress, CodeIgniter, etc.
+        <br/>   <br />
+        Développement de CMS : création de systèmes de gestion de contenu (CMS) à l'aide de PHP, soit personnalisés, soit utilisant<br/> des
+        plateformes telles que WordPress, Joomla ou Drupal.
+          <br/><br />
+          Personnalisation de WordPress : Adaptation des thèmes et plugins WordPress existants pour répondre à des<br/> exigences spécifiques.
+
+          <br/><br />
+          Développement d'applications monopage (SPA) : création d'applications Web interactives avec
+          React pour une expérience utilisateur fluide.
+
+        </spane>
+        <a href={CV_Aziz} download>
+          <button className="button s-button">Focus</button>
+        </a>
+        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
-      {/* right image side */}
-      <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
-        {/* animation */}
-        <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        />
-
+      {/* right */}
+      <div className="cards">
+        {/* first card */}
         <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
+          initial={{ left: "25rem" }}
+          whileInView={{ left: "14rem" }}
           transition={transition}
-          className="floating-div"
         >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
+           <Card
+            emoji={Glasses}
+            heading={"Developer"}
+            detail={"Html, Css, JavaScript, React, Nodejs, Express,PHP,Wordpress,Laravel"}
+          />
         </motion.div>
-
-        {/* animation */}
+        {/* second card */}
         <motion.div
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
+          initial={{ left: "-11rem", top: "12rem" }}
+          whileInView={{ left: "-4rem" }}
           transition={transition}
-          className="floating-div"
         >
-          {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Mobile" text2="Developer" />
+        
         </motion.div>
-
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
+        {/* 3rd */}
+        <motion.div
+          initial={{ top: "19rem", left: "25rem" }}
+          whileInView={{ left: "12rem" }}
+          transition={transition}
+        >
+         
+        </motion.div>
         <div
-          className="blur"
-          style={{
-            background: "#C1F5FF",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
+          className="blur s-blur2"
+          style={{ background: "var(--purple)" }}
         ></div>
       </div>
     </div>
   );
 };
 
-export default Intro;
+export default Services;
