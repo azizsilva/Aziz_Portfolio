@@ -13,6 +13,7 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -29,20 +30,20 @@ const Intro = () => {
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Mohamed Aziz Rezgui</span>
-          <span style={{color: "#fff !important"}}>
-          Full stack Web and mobile developer with high level of experience in web designing
-            and development, producting the Quality work
+          <span style={{color: "#fff !important",lineHeight:'40px'}}>
+          Au cours de mon expérience en tant que développeur web, j'ai travaillé avec plusieurs entreprises comme Connectors Technologies, GoMedia et OpenLink, IT-Pro Agency, 24-7 Digital Design et Jobid. Chez Connectors Technologies et It-Pro Agency, j'ai aidé à créer un nouveau site web en utilisant des outils modernes comme Laravel ,wordpress,PHP,React. Ensuite, chez GoMedia, j'ai développé des applications web et ajouté des fonctionnalités de commerce en ligne. Enfin, chez IT-Pro Agency, j'ai pris en charge plusieurs projets de A à Z, en veillant à ce que tout fonctionne bien et soit sécurisé. Ces expériences m'ont permis de renforcer mes compétences techniques et d'apprendre à mieux travailler en équipe,j'ai aussi le plaisir de vous parler de moi et de mon rôle en tant que formateur en développement web dans un centre de formation  renommé Its International Trainig Solution
+          (ITS) et Cabinet d'etude de Formation (CEF), je suis co-fondateur d'une start-up en HealthTEch nommée Health me en cours d'établissement, j'enseigne les bases et les avancées de langages tels que le HTML, le CSS, le JavaScript, ainsi que divers frameworks modernes comme Laravel wordpress. De plus, je forme des étudiants à l'utilisation de WordPress, une plateforme essentielle pour la création et la gestion de sites web.
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
+          <button className="button i-button">Focus</button>
         </Link>
         {/* social icons */}
-        <div className="i-icons">
+        {/* <div className="i-icons">
          
         <a  target="_blank" href="https://www.linkedin.com/in/mohamed-aziz-rezgui-b5a8a5227/" rel="noreferrer">  <img src={LinkedIn} alt="" /></a>
           <img src={Instagram} alt="" />
-        </div>
+        </div> */}
       </div>
       {/* right image side */}
       <div className="i-right">
