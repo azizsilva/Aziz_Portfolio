@@ -25,6 +25,7 @@ import itpro from "../../img/itpro.png";
 import its from "../../img/its.png";
 import solar from "../../img/solar.png";
 import resalera from "../../img/resalera.png";
+import brokerlink from "../../img/brokerlink.png";
 import mutliservice from "../../img/mutliservice.png";
 import { themeContext } from "../../Context";
 const Portfolio = () => {
@@ -43,6 +44,11 @@ const Portfolio = () => {
         grabCursor={true}
         className="portfolio-slider"
       >
+        <SwiperSlide>
+        <a  target="_blank" href="https://brokerlink.ae/" rel="noreferrer">  
+        <img  height={'500px'} src={brokerlink} alt="" /></a>
+        </SwiperSlide>
+
         <SwiperSlide>
         <a  target="_blank" href="https://meilleursplacements2021.com/" rel="noreferrer">  
         <img src={kids} alt="" /></a>
